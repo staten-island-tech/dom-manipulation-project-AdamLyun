@@ -4,63 +4,123 @@ const DOMSelectors = {
   box: document.getElementById("container-box"),
 };
 
-DOMSelectors.button.addEventListener("click", function () {
-  const year = parseInt(document.getElementById('input').value);
-  const age = (2022 - year );
-
-  if(year < 1901){
-    DOMSelectors.box.insertAdjacentHTML(
-      "beforeend",
-      `<p id="text"> You are ${age} years old. Congrats on being born before a classfied generation...</p> 
-    ` );
-}else if(year >=1901 && year < 1925){
-  DOMSelectors.box.insertAdjacentHTML(
-    "beforeend",
-    `<p id="text"> You are ${age} years old. Congrats on being born in "The Greatest Generation" (1901-1924)</p> 
-  ` );
-}else if(year >=1925 && year < 1946){
-  DOMSelectors.box.insertAdjacentHTML(
-    "beforeend",
-    `<p id="text">  You are ${age} years old. Congrats on being born in "The Silent Generation" (1925-1945)  </p> 
-  ` );
-}else if(year >=1946 && year < 1965){
-  DOMSelectors.box.insertAdjacentHTML(
-    "beforeend",
-    `<p id="text"> You are ${age} years old. Congrats on being born in  "The Baby Boomer Generation" (1946-1964) </p> 
-  ` );
-}else if(year >=1965 && year < 1980){
-  DOMSelectors.box.insertAdjacentHTML(
-    "beforeend",
-    `<p id="text"> You are ${age} years old. Congrats on being born in "Generation X" (1965-1979) </p> 
-  ` );
-}else if(year >=1980 && year < 1995){
-  DOMSelectors.box.insertAdjacentHTML(
-    "beforeend",
-    `<p id="text"> You are ${age} years old. Congrats on being born in  "Millennials" (1980-1994) </p> 
-  ` );
-}else if(year >=1995 && year < 2013){
-  DOMSelectors.box.insertAdjacentHTML(
-    "beforeend",
-    `<p id="text"> You are ${age} years old. Congrats on being born in  "Generation Z" (1995-2012)  </p> 
-  ` );
-}else if(year >=2013  && year < 2026){
-  DOMSelectors.box.insertAdjacentHTML(
-    "beforeend",
-    `<p id="text"> You are ${age} years old. Congrats on being born in  "Gen Alpha" (2013–2025)  </p> 
-  ` );
-}else if(year > 2025) {
-  DOMSelectors.box.insertAdjacentHTML(
-    "beforeend",
-    `<p id="text"> You are ${age} years old. You dont exist yet :) </p> 
-  ` );
-}
-
-  DOMSelectors.input.value = ``;
-});
-;
 
 
-const reset = document.querySelector('#reset');
-reset.addEventListener('click', () => {
-  document.location.reload();
-});
+
+  DOMSelectors.button.addEventListener("click", function(){
+    let input = DOMSelectors.input.value; 
+    DOMSelectors.box.insertAdjacentHTML("beforeend", 
+    ` <p> ${input}</p>`)
+    DOMSelectors.input.value= ``
+   });
+  
+
+
+const characters = [
+  {
+ id: "aatrox",
+ key: "266",
+ name: "Aatrox",
+ title: "the Darkin Blade",
+ tags: [
+   "Fighter",
+   "Tank"
+ ],
+},
+{
+ id: "ahri",
+ key: "103",
+ name: "Ahri",
+ title: "the Nine-Tailed Fox",
+ tags: [
+   "Mage",
+   "Assassin"
+ ],
+},
+{
+ id: "akali",
+ key: "84",
+ name: "Akali",
+ title: "the Rogue Assassin",
+ tags: [
+   "Assassin"
+ ],
+},
+{
+ id: "alistar",
+ key: "12",
+ name: "Alistar",
+ title: "the Minotaur",
+ tags: [
+   "Tank",
+   "Support"
+ ],
+},
+{
+ id: "amumu",
+ key: "32",
+ name: "Amumu",
+ title: "the Sad Mummy",
+ tags: [
+   "Tank",
+   "Mage"
+ ],
+},
+{
+ id: "anivia",
+ key: "34",
+ name: "Anivia",
+ title: "the Cryophoenix",
+ tags: [
+   "Mage",
+   "Support"
+ ],
+},
+{
+ id: "annie",
+ key: "1",
+ name: "Annie",
+ title: "the Dark Child",
+ tags: [
+   "Mage"
+ ],
+},
+{
+ id: "aphelios",
+ key: "523",
+ name: "Aphelios",
+ title: "the Weapon of the Faithful",
+ tags: [
+   "Marksman"
+ ],
+},
+{
+ id: "ashe",
+ key: "22",
+ name: "Ashe",
+ title: "the Frost Archer",
+ tags: [
+   "Marksman",
+   "Support"
+],
+},
+{
+ id: "aurelionsol",
+ key: "136",
+ name: "Aurelion Sol",
+ title: "The Star Forger",
+ tags: [
+   "Mage"
+ ],
+},
+{
+ id: "azir",
+ key: "268",
+ name: "Azir",
+ title: "the Emperor of the Sands",
+ tags: [
+   "Mage",
+   "Marksman"
+ ],    
+},
+]

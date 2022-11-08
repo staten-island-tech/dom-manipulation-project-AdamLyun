@@ -6,9 +6,15 @@ const DOMSelectors = {
 
 
 
-
   DOMSelectors.button.addEventListener("click", function(){
     let input = DOMSelectors.input.value; 
+    if(input === 'akali' {
+      document.getElementById('height_error').innerHTML = 'Please provide a valid height';
+  }else{
+      document.getElementById('height_error').innerHTML = '';
+      height_status=true;
+  }
+
     DOMSelectors.box.insertAdjacentHTML("beforeend", 
     ` <p> ${input}</p>`)
     DOMSelectors.input.value= ``

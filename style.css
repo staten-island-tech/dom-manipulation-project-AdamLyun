@@ -8,28 +8,7 @@ body,
 }
 
 body{
-    text-align: center;
+    text-align: left;
     background-color: palegoldenrod;
     font-size: 2rem;
 }
-
-.outer {
-    flex-wrap: wrap;
-    justify-content: center;
-    display: flex;
-    margin: 2%;
-  }
-  
-.inner {
-    background-color: white;
-    border: 8px solid black;
-    border-radius: 10%;
-    width: 23rem;
-    height: 20rem;
-    margin: 2%;
-    align-content: flex-start;
-  }
-  
-  #red {
-    color: red;
-  }

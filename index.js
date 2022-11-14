@@ -6,91 +6,74 @@ const DOMSelectors = {
   box: document.getElementById("container-box"),
 };
 
-DOMSelectors.button.addEventListener("click", function(){
+DOMSelectors.button.addEventListener("click", function () {
   let input1 = DOMSelectors.input1.value;
-  let input2 = DOMSelectors.input2.value; 
-  let input3= DOMSelectors.input3.value;
-  if (input3 ==="Aatrox"){
-    DOMSelectors.box.insertAdjacentHTML("beforeend",
-    `<p> - ${input1}  ${input2} bob <button onclick="removeParent(this.parentNode)">Finished</button </p>`)
-    DOMSelectors.input1.value= ``
-    DOMSelectors.input2.value= ``
-    DOMSelectors.input3.value= ``
-  }else if (input3 == "Ahri"){
-    DOMSelectors.box.insertAdjacentHTML("beforeend",
-    `<p> - ${input1}  ${input2} dad <button onclick="removeParent(this.parentNode)">Finished</button </p>`)
-    DOMSelectors.input1.value= ``
-    DOMSelectors.input2.value= ``
-    DOMSelectors.input3.value= ``
-  }else{
-  DOMSelectors.box.insertAdjacentHTML("beforeend",
-  `<p> - ${input1}  ${input2} die<button onclick="removeParent(this.parentNode)">Finished</button </p>`)
-  DOMSelectors.input1.value= ``
-  DOMSelectors.input2.value= ``
-  DOMSelectors.input3.value= ``
+  let input2 = DOMSelectors.input2.value;
+  let input3 = DOMSelectors.input3.value;
+  if (input3 === "") {
+  } else if (input3 == "Monster") {
+    DOMSelectors.box.insertAdjacentHTML(
+      "beforeend",
+      ` <div id="center">
+    <h2>${input1} </h2>
+    <img src="monster.png" alt="monster">
+    <p> ${input2}  </p><button onclick="removeParent(this.parentNode)">Finished</button </div>
+    `
+    );
+    DOMSelectors.input1.value = ``;
+    DOMSelectors.input2.value = ``;
+    DOMSelectors.input3.value = ``;
+  } else if (input3 == "Shark") {
+    DOMSelectors.box.insertAdjacentHTML(
+      "beforeend",
+      ` <div id="center">
+    <h2>${input1} </h2>
+    <img src="shark.png" alt="shark">
+    <p> ${input2}  </p><button onclick="removeParent(this.parentNode)">Finished</button </div>
+    `
+    );
+    DOMSelectors.input1.value = ``;
+    DOMSelectors.input2.value = ``;
+    DOMSelectors.input3.value = ``;
+  } else if (input3 == " Dude With A Gun") {
+    DOMSelectors.box.insertAdjacentHTML(
+      "beforeend",
+      ` <div id="center">
+    <h2>${input1} </h2>
+    <img src="dudewithagun.png" alt="dudewithagun">
+    <p> ${input2}  </p><button onclick="removeParent(this.parentNode)">Finished</button </div>
+    `
+    );
+    DOMSelectors.input1.value = ``;
+    DOMSelectors.input2.value = ``;
+    DOMSelectors.input3.value = ``;
+  } else if (input3 == "Person Sitting On a Bench") {
+    DOMSelectors.box.insertAdjacentHTML(
+      "beforeend",
+      ` <div id="center">
+    <h2>${input1} </h2>
+    <img src="PersonSittingonabench.png" alt="PersonSittingonabench">
+    <p> ${input2}  </p><button onclick="removeParent(this.parentNode)">Finished</button </div>
+    `
+    );
+    DOMSelectors.input1.value = ``;
+    DOMSelectors.input2.value = ``;
+    DOMSelectors.input3.value = ``;
+  } else {
+    DOMSelectors.box.insertAdjacentHTML(
+      "beforeend",
+      ` <div id="center">
+    <h2>${input1} </h2>
+    <img src="Couple.png" alt="couple">
+    <p> ${input2}  </p><button onclick="removeParent(this.parentNode)">Finished</button </div>
+    `
+    );
+    DOMSelectors.input1.value = ``;
+    DOMSelectors.input2.value = ``;
+    DOMSelectors.input3.value = ``;
   }
-})
+});
 
-
-function removeParent(d){
- d.remove()
+function removeParent(d) {
+  d.remove();
 }
-
-if (input3.value ==="Aatrox"){
-
-
-}
-
-
-
-const chacters= [
-  {
- id: "aatrox",
- key: "266",
- name: "Aatrox",
- title: "the Darkin Blade",
- tags: [
-   "Fighter",
-   "Tank"
- ],
-},
-{
- id: "ahri",
- key: "103",
- name: "Ahri",
- title: "the Nine-Tailed Fox",
- tags: [
-   "Mage",
-   "Assassin"
- ],
-},
-{
- id: "akali",
- key: "84",
- name: "Akali",
- title: "the Rogue Assassin",
- tags: [
-   "Assassin"
- ],
-},
-{
- id: "alistar",
- key: "12",
- name: "Alistar",
- title: "the Minotaur",
- tags: [
-   "Tank",
-   "Support"
- ],
-},
-{
- id: "amumu",
- key: "32",
- name: "Amumu",
- title: "the Sad Mummy",
- tags: [
-   "Tank",
-   "Mage"
- ],
-},
-]

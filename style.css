@@ -12,3 +12,21 @@ body{
     background-color: palegoldenrod;
     font-size: 2rem;
 }
+
+
+#center{
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 10px;
+    background-color: white;
+    align-content: center;
+    border: 5px solid black;
+    width: 20%;
+    height: auto;
+    border-radius: 10%;
+    margin: 5px auto;
+    position: relative;
+}
+img {
+    width: 85%;
+  }

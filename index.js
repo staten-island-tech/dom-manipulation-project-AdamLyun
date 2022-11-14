@@ -17,7 +17,7 @@ DOMSelectors.button.addEventListener("click", function () {
       ` <div id="center">
     <h2>${input1} </h2>
     <img src="monster.png" alt="monster">
-    <p> ${input2}  </p><button onclick="removeParent(this.parentNode)">Finished</button </div>
+    <p> By:${input2}  </p><button id="red"  onclick="removeParent(this.parentNode)">Delete</button </div>
     `
     );
     DOMSelectors.input1.value = ``;
@@ -29,31 +29,31 @@ DOMSelectors.button.addEventListener("click", function () {
       ` <div id="center">
     <h2>${input1} </h2>
     <img src="shark.png" alt="shark">
-    <p> ${input2}  </p><button onclick="removeParent(this.parentNode)">Finished</button </div>
+    <p> By:${input2}  </p><button id="red" onclick="removeParent(this.parentNode)">Delete</button </div>
     `
     );
     DOMSelectors.input1.value = ``;
     DOMSelectors.input2.value = ``;
     DOMSelectors.input3.value = ``;
-  } else if (input3 == " Dude With A Gun") {
+  } else if (input3 == "Dude With A Gun") {
     DOMSelectors.box.insertAdjacentHTML(
       "beforeend",
       ` <div id="center">
     <h2>${input1} </h2>
     <img src="dudewithagun.png" alt="dudewithagun">
-    <p> ${input2}  </p><button onclick="removeParent(this.parentNode)">Finished</button </div>
+    <p> By:${input2}  </p><button id="red" onclick="removeParent(this.parentNode)">Delete</button </div>
     `
     );
     DOMSelectors.input1.value = ``;
     DOMSelectors.input2.value = ``;
     DOMSelectors.input3.value = ``;
-  } else if (input3 == "Person Sitting On a Bench") {
+  } else if (input3 == "Person Sitting On A Bench") {
     DOMSelectors.box.insertAdjacentHTML(
       "beforeend",
       ` <div id="center">
     <h2>${input1} </h2>
     <img src="PersonSittingonabench.png" alt="PersonSittingonabench">
-    <p> ${input2}  </p><button onclick="removeParent(this.parentNode)">Finished</button </div>
+    <p> By:${input2}  </p><button id="red" onclick="removeParent(this.parentNode)">Delete</button </div>
     `
     );
     DOMSelectors.input1.value = ``;
@@ -65,7 +65,7 @@ DOMSelectors.button.addEventListener("click", function () {
       ` <div id="center">
     <h2>${input1} </h2>
     <img src="Couple.png" alt="couple">
-    <p> ${input2}  </p><button onclick="removeParent(this.parentNode)">Finished</button </div>
+    <p> By:${input2}  </p><button id="red" onclick="removeParent(this.parentNode)">Delete</button </div>
     `
     );
     DOMSelectors.input1.value = ``;

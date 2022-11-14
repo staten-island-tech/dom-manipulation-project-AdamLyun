@@ -4,12 +4,14 @@ body,
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-size: 62.5%:
+    font-size: 2;
+    font-family: 'Libre Franklin', sans-serif;
+font-family: 'Noto Sans KR', sans-serif;
 }
 
 body{
     text-align: left;
-    background-color: palegoldenrod;
+    background-color: lightblue;
     font-size: 2rem;
 }
 
@@ -30,3 +32,18 @@ body{
 img {
     width: 85%;
   }
+
+#red{
+    background-color:red;
+    color:white;
+padding: 6px 12px;
+margin-bottom: 0;
+font-size: 14px;
+line-height: 1.42857143;
+text-align: center;
+white-space: nowrap;
+vertical-align: middle;
+cursor: pointer;
+border: 1px solid transparent;
+border-radius: 4px;
+}

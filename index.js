@@ -17,7 +17,7 @@ DOMSelectors.button.addEventListener("click", function () {
       ` <div id="center">
     <h2>${input1} </h2>
     <img src="monster.png" alt="monster">
-    <p> By:${input2}  </p><button id="red"  onclick="removeParent(this.parentNode)">Delete</button </div>
+    <p> By:${input2}  </p><button id="red" >Delete</button </div>
     `
     );
     DOMSelectors.input1.value = ``;
@@ -29,7 +29,7 @@ DOMSelectors.button.addEventListener("click", function () {
       ` <div id="center">
     <h2>${input1} </h2>
     <img src="shark.png" alt="shark">
-    <p> By:${input2}  </p><button id="red" onclick="removeParent(this.parentNode)">Delete</button </div>
+    <p> By:${input2}  </p><button id="red">Delete</button </div>
     `
     );
     DOMSelectors.input1.value = ``;
@@ -77,3 +77,4 @@ DOMSelectors.button.addEventListener("click", function () {
 function removeParent(d) {
   d.remove();
 }
+button;

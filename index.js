@@ -6,29 +6,34 @@ const DOMSelectors = {
   box: document.getElementById("container-box"),
 };
 
-DOMSelectors.button.addEventListener("click", function () {
+DOMSelectors.button.addEventListener("click", function (card) {
+  card.preventDefault();
   let input1 = DOMSelectors.input1.value;
   let input2 = DOMSelectors.input2.value;
   let input3 = DOMSelectors.input3.value;
+  function makeCard(){
   DOMSelectors.box.insertAdjacentHTML(
-    "afterend",
+    "beforeend",
     `<div class="output">
     <h3>${input1}</h3>
-    <img src="${input3}.png" alt="a">
+    <img src="${input3}.png" alt="No Image???">
      <h3>${input2}</h3>
     <button class="remove">Remove</button>
     </div>`
   );
-
-
-  const removes = document.querySelectorAll(".remove");
-  const outputs = document.querySelector(".output");
+  DOMSelectors.input1.value="";
+  DOMSelectors.input2.value="";
+  DOMSelectors.input3.value="";
+}
+function erase(){
+  let removes = document.querySelectorAll(".remove");
   removes.forEach((eachRemove) => {
-    eachRemove.addEventListener("click", () => {
-
-      outputs.remove();
-      
-   
-    });
+    eachRemove.addEventListener("click", (event => {
+   event.target.parentElement.remove();
+    }));
   });
-}); 
+};
+
+makeCard();
+erase();
+});

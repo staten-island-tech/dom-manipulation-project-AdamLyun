@@ -8,10 +8,14 @@ const DOMSelectors = {
 
 DOMSelectors.button.addEventListener("click", function (card) {
   card.preventDefault();
+  makeCard();
+  erase();
+});
+
+function makeCard(){
   let input1 = DOMSelectors.input1.value;
   let input2 = DOMSelectors.input2.value;
   let input3 = DOMSelectors.input3.value;
-  function makeCard(){
   DOMSelectors.box.insertAdjacentHTML(
     "beforeend",
     `<div class="output">
@@ -24,7 +28,7 @@ DOMSelectors.button.addEventListener("click", function (card) {
   DOMSelectors.input1.value="";
   DOMSelectors.input2.value="";
   DOMSelectors.input3.value="";
-}
+};
 function erase(){
   let removes = document.querySelectorAll(".remove");
   removes.forEach((eachRemove) => {
@@ -33,7 +37,3 @@ function erase(){
     }));
   });
 };
-
-makeCard();
-erase();
-});
